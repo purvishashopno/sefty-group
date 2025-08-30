@@ -90,10 +90,10 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mb-2 mb-lg-0 nav-folder">
                                 <li class="nav-item folder">
-                                    <a class="nav-link active active-folder" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active active-folder" aria-current="page" href="home.html">Home</a>
                                 </li>
                                 <li class="nav-item folder">
-                                    <a class="nav-link active-folder" href="#">About Us</a>
+                                    <a class="nav-link active-folder" href="About.html">About Us</a>
                                 </li>
                                 <li class="nav-item dropdown folder">
                                     <a class="nav-link active-folder dropdown-toggle" href="#" role="button"
@@ -107,13 +107,13 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item folder">
-                                    <a class="nav-link active-folder " href="#">Our Team</a>
+                                    <a class="nav-link active-folder " href="team.html">Our Team</a>
                                 </li>
                                 <li class="nav-item folder">
-                                    <a class="nav-link active-folder" href="#">Projects</a>
+                                    <a class="nav-link active-folder" href="project.html">Projects</a>
                                 </li>
                                 <li class="nav-item folder">
-                                    <a class="nav-link active-folder" href="#">Contact</a>
+                                    <a class="nav-link active-folder" href="contact.html">Contact</a>
                                 </li>
                             </ul>
 
@@ -741,5 +741,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector("footer .footer-container");
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // 🔹 First remove old class (reset animation)
+          footer.classList.remove("footer-slide-up");
+
+          // 🔹 Force reflow (browser ne reset karava mate)
+          void footer.offsetWidth;
+
+          // 🔹 Add class again → animation restart
+          footer.classList.add("footer-slide-up");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(footer);
+  });
+</script>
 </html>

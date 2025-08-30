@@ -1053,3 +1053,101 @@ footer {
         justify-content: center;
       }
     }
+
+    /* CSS */
+@keyframes bottomToTop {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.footer-slide-up {
+  animation: bottomToTop 1s ease-out forwards;
+}
+
+.footer-container {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+
+    /* about section */
+
+    .about-page{
+      background-color: white !important;
+    }
+
+    .navbar-brand1 img {
+    /* filter: brightness(0) invert(1); */
+    max-width: 230px;
+    height: 52px;
+    }
+
+    .active-folder1 {
+    color: rgb(0, 0, 0) !important;
+    margin: 0px 12px;
+}
+
+/* new mav */
+
+.breadcrumbsdiv {
+    position: relative;
+    background: url(images/123.jpeg) center / cover no-repeat;
+    /* background-attachment: fixed; */
+    color: #fff;
+}
+
+.breadcrumbsdiv::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .48);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.py-5{
+      position: relative;
+    z-index: 1;
+}
+
+.py-5 ol{
+  padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.py-5 ol li{
+  color: #212529bf;
+   list-style: none;   /* 🔹 Default marker remove kare che */
+  padding: 0;         /* Optional: left padding remove */
+  margin: 0;
+}
+
+.py-5 ol li h2{
+      color: white !important;
+      text-align: center;
+}
+
+/* new page */
+
+.about-content h3{
+  font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.mb-3{
+  margin-bottom: 1 rem !important;
+  font-size: 18px;
+}
+
+.aos-animate{
+  transition-delay: .15s;
+  opacity: 1;
+    transform: translateZ(0);
+        transition-duration: .7s;
+}
