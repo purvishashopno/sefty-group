@@ -156,10 +156,129 @@
             </div>
         </div>
     </div>
+<footer>
+    <div class="footer-container">
+      <!-- Column 1: Logo -->
+      <div class="footer-logo">
+        <img src="images/logo.webp" alt="Logo">
 
+        <div class="footer-contact">
+      
+        <p><img src="images/location-pin (1).png" alt=""> 
+                                    C-43/28/1 Nawal Kishore Road Hazratganj, Lucknow, Uttar Pradesh, India, 226001
+                            </p>
+        <p><img src="images/telephone-call (1).png" alt=""> 0522-4026070</p>
+        <p><img src="images/telephone-call (1).png" alt=""> 0522-2202646</p>
+        <p><img src="images/mail.png" alt=""> info@safetygroup.in</p>
+      </div>
+        <div class="social">
+          <ul>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://x.com/"><img src="images/twitter.png" alt="Twitter"></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Licence</a></li>
+           <li><a href="#">organisation chart</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: Policies -->
+      <div>
+        <h3>Our Policy</h3>
+        <ul>
+          <li><a href="#">Policy for UPSI</a></li>
+          <li><a href="#">Archival of Documents</a></li>
+          <li><a href="#">Familiarization Program of Independent Directors</a></li>
+          <li><a href="#">Anti Sexual Harrasment Policy</a></li>
+          <li><a href="#">Policy on determination of Materiality of Event</a></li>
+          <li><a href="#">Code of Conduct for Directors & Senior Management Personnel</a></li>
+          <!-- <li><a href="#">Code for Independent Directors</a></li>
+          <li><a href="#"> Risk management Policy</a></li>
+          <li><a href="#"> Nomination & Remuneration Policy</a></li>
+          <li><a href="#"> Vigil Mechanism Policy</a></li> -->
+        </ul>
+      </div>
+      <!-- Column 4: Services -->
+      <div>
+<h3></h3>
+        <ul>
+          <li><a href="#">Policy on RPT</a></li>
+          <li><a href="#">Prohibition of Insider Trading</a></li>
+          <li><a href="#">CSR Policy</a></li>
+          <li><a href="#">Code of Practice and procedure for Fair Disclosure</a></li>
+          <li><a href="#">Criteria for making Payment to Non executive directors</a></li>
+          <li><a href="#"> Nomination & Remuneration Policy</a></li>
+          <li><a href="#"> Vigil Mechanism Policy</a></li>
+           <!-- <li><a href="#">Material Litigation and material Creditors</a></li>
+          <li><a href="#">Policy in determining Material Subsidiary</a></li>
+          <li><a href="#">Code of Practice and Fair disclosure of UPSI </a></li>
+          <li><a href="#">Terms and Condition of Independent Director</a></li> -->
+        </ul>
+      </div>
+      <!-- Column 5: Contact Info -->
+
+      <div>
+<h3></h3>
+        <ul>
+            <li><a href="#">Code for Independent Directors</a></li>
+          <li><a href="#"> Risk management Policy</a></li>
+          <!-- <li><a href="#"> Nomination & Remuneration Policy</a></li>
+          <li><a href="#"> Vigil Mechanism Policy</a></li>
+          <li><a href="#">Policy on RPT</a></li>
+          <li><a href="#">Prohibition of Insider Trading</a></li>
+          <li><a href="#">CSR Policy</a></li>
+          <li><a href="#">Code of Practice and procedure for Fair Disclosure</a></li>
+          <li><a href="#">Criteria for making Payment to Non executive directors</a></li> -->
+           <li><a href="#">Material Litigation and material Creditors</a></li>
+          <li><a href="#">Policy in determining Material Subsidiary</a></li>
+          <li><a href="#">Code of Practice and Fair disclosure of UPSI </a></li>
+          <li><a href="#">Terms and Condition of Independent Director</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="footer-contact">
+        <h3>Contact Info</h3>
+        <p><img src="images/location-pin (1).png" alt=""> C-43/28/1 Nawal Kishore Road, Lucknow, UP - 226001</p>
+        <p><img src="images/telephone-call (1).png" alt=""> 0522-4026070</p>
+        <p><img src="images/telephone-call (1).png" alt=""> 0522-2202646</p>
+        <p><img src="images/mail.png" alt=""> info@safetygroup.in</p>
+      </div> -->
+    </div>
+  </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector("footer .footer-container");
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // 🔹 First remove old class (reset animation)
+          footer.classList.remove("footer-slide-up");
+
+          // 🔹 Force reflow (browser ne reset karava mate)
+          void footer.offsetWidth;
+
+          // 🔹 Add class again → animation restart
+          footer.classList.add("footer-slide-up");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(footer);
+  });
+</script>
 </html>
